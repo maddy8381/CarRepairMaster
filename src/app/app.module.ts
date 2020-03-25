@@ -11,6 +11,8 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { LoginComponent } from './login/login.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { FooterComponent } from './footer/footer.component';
+import { ServiceInfoCardComponent } from './service-info-card/service-info-card.component';
+import { ServicesOffCardComponent } from './services-off-card/services-off-card.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { FooterComponent } from './footer/footer.component';
     ContactUsComponent,
     LoginComponent,
     PageNotFoundComponent,
-    FooterComponent
+    FooterComponent,
+    ServiceInfoCardComponent,
+    ServicesOffCardComponent
   ],
   imports: [
     BrowserModule,

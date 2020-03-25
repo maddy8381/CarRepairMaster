@@ -13,6 +13,7 @@ import { FooterComponent } from './footer/footer.component';
 import { ServiceInfoCardComponent } from './service-info-card/service-info-card.component';
 import { ServicesOffCardComponent } from './services-off-card/services-off-card.component';
 import { ServicesOfferedComponent } from './services-offered/services-offered.component';
+import { SignupComponent } from './signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ServicesOfferedComponent } from './services-offered/services-offered.co
     FooterComponent,
     ServiceInfoCardComponent,
     ServicesOffCardComponent,
-    ServicesOfferedComponent
+    ServicesOfferedComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,

@@ -1,1 +1,18 @@
-<p>login works!</p>
+<div id="loginFormDiv" class="container">
+		<h1 class="text-center">Log in</h1>
+
+        <div id="checkLogin" style="color: red;font-size: 15px;text-align: center;"></div>
+		<form>
+		    <label for="fname">Email</label>
+		    <input type="email"  name="email" placeholder="Enter Email *" id="email" class="loginInputAndSelect" required>
+		    <div id="error"></div>
+		    <label for="lname">Password</label>
+		    <input type="password"  name="password" placeholder="Enter Password *" id="password" class="loginInputAndSelect" required><br>
+		    <input type="checkbox" id="loginType" style="width: 15px;height: 15px;"> <small style="margin-top: -5px;">Login as Admin</small><br>
+		  
+		</form>
+		<input type="submit" value="LOGIN"  onclick="login();" id="login" class="loginSubmitInput">
+		
+		<h3 class="text-center">Don't have an account?<a routerLink="/signup" style="color: black;"> Sign up</a></h3>
+        
+</div>

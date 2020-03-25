@@ -1,0 +1,30 @@
+<div id="loginFormDiv" class="container">
+    <h1 class="center-text"> Sign Up</h1>
+    <form>
+        <label>Name</label>
+        <input type="text" name="name" placeholder="Enter Name *" id="name" class="loginInputAndSelect" required>
+       <small id="errorName" style="color: red"></small><br>
+  
+      <label for="fname">Email</label>
+      <input type="email"  name="email" placeholder="Enter Email *" id="email" class="loginInputAndSelect" required>
+      <small id="errorEmail" style="color: red"></small><br>
+       
+  
+      <label for="fname">Mobile Number</label>
+      <input type="number"  name="mobileNumber" placeholder="Enter Mobile Number *" class="loginInputAndSelect" id="mobileNumber" required>
+      <small id="errorMobile" style="color: red"></small><br>
+       
+  
+      <label for="lname">Password</label>
+      <input type="password"  name="password" placeholder="Enter Password *" class="loginInputAndSelect" id="password" required>
+      <small id="errorPass" style="color: red"></small><br>
+      
+      <label>Confirm Password</label>
+        <input type="password" name="confirmPassword" placeholder="Enter Password Again *" id="confirmPassword" class="loginInputAndSelect" required>
+      <small id="errorPassword" style="color: red"></small><br>
+     
+    </form>
+    <input type="submit" value="SUBMIT" onclick="registration();" id="submit" class="loginSubmitInput">
+     
+      <h3 class="center-text"> I'm already a member <a routerLink = "/login" style="color: black;"> Log in</a></h3>
+</div>

@@ -14,6 +14,8 @@ import { ServiceInfoCardComponent } from './service-info-card/service-info-card.
 import { ServicesOffCardComponent } from './services-off-card/services-off-card.component';
 import { ServicesOfferedComponent } from './services-offered/services-offered.component';
 import { SignupComponent } from './signup/signup.component';
+import { GetSampleStringService } from './get-sample-string.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -32,9 +34,10 @@ import { SignupComponent } from './signup/signup.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [GetSampleStringService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

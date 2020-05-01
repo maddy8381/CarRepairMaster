@@ -17,8 +17,7 @@ const routes: Routes = [
   { path : 'services', component : ServicesOfferedComponent},
   { path : 'contact-us', component : ContactUsComponent},
   { path : 'login', component : LoginComponent},
-  { path : 'signup', component : SignupComponent},
-  { path : '**', component : PageNotFoundComponent}
+  { path : 'signup', component : SignupComponent}
 ];
 
 @NgModule({

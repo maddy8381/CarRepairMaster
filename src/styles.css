@@ -1,3 +1,7 @@
 .center-text{
     text-align: center;
 }
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}

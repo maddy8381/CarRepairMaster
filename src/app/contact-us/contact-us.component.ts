@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { SampleClass } from 'src/SampleClass';
 import { GetSampleStringService } from '../get-sample-string.service';
+import { FormGroup, FormControl, Validators} from '@angular/forms';
+import { ContactUsFormService } from '../contact-us-form.service';
+import { ContactDetails } from '../ContactDetails';
 
 @Component({
   selector: 'app-contact-us',
@@ -8,17 +10,30 @@ import { GetSampleStringService } from '../get-sample-string.service';
   styleUrls: ['./contact-us.component.css']
 })
 export class ContactUsComponent implements OnInit {
-  public stringData;
-  public error;
-  public temp = "fdsfds";
+  public stringData : any;
+  private contactUsObj:ContactDetails;
 
-  constructor(private getSampleStringService : GetSampleStringService) { }
+  constructor(private getSampleStringService : GetSampleStringService, private saveContactUsDataService: ContactUsFormService) { }
 
   ngOnInit() {
     this.getSampleStringService.getResult().subscribe((data: any) => {
       this.stringData = data;
-    });
-    
+    });    
   }
 
+  onClickSubmit(data){
+    alert(data.email);
+    this.contactUsObj = {
+      name : data.name,
+      email : data.email,
+      query : data.problems
+    };
+    
+    alert(this.contactUsObj.query +"sds");
+    this.saveContactUsDataService.saveContactUsForm(this.contactUsObj).subscribe(
+      response => console.log(response), // success
+      error => console.log(error),       // error
+      () => console.log('completed') 
+     );
+  }
 }

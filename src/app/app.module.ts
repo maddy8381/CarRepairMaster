@@ -16,6 +16,7 @@ import { ServicesOfferedComponent } from './services-offered/services-offered.co
 import { SignupComponent } from './signup/signup.component';
 import { GetSampleStringService } from './get-sample-string.service';
 import { HttpClientModule } from '@angular/common/http';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [GetSampleStringService],
   bootstrap: [AppComponent]
